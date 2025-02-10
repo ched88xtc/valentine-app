@@ -103,7 +103,7 @@ function NoPage() {
 // Main App Component
 function App() {
   return (
-    <Router basename="/">
+    <Router basename="/valentine-app">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/yes" element={<YesPage />} />
