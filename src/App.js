@@ -103,7 +103,7 @@ function NoPage() {
 // Main App Component
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/yes" element={<YesPage />} />
