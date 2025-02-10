@@ -7,7 +7,6 @@ import {
 import "./App.css"; // Import your CSS for styling
 import { useState } from "react";
 
-
 // Home Page Component
 function Home() {
   const navigate = useNavigate();
@@ -41,19 +40,15 @@ function YesPage() {
   return (
     <div className="container yes-page">
       <h1>Я так і знав :3</h1>
-      <h1>{"\u2764\ufe0f"}Люблю тебе{"\u2764\ufe0f"}</h1>
+      <h1>
+        {"\u2764\ufe0f"}Люблю тебе{"\u2764\ufe0f"}
+      </h1>
       <img
         src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMG5jMG15aGFyaXM5dzZkdHByZWppM3Ewd3loZHF1YWV6aHFqODM4eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oz8xsaLjLVqVXr3tS/giphy.gif"
         alt="Mock Image"
         className="image"
         width={"100%"}
       />
-      <button
-        className="back-button"
-        onClick={() => (window.location.href = "/")}
-      >
-        Go Back
-      </button>
     </div>
   );
 }
@@ -61,7 +56,10 @@ function YesPage() {
 // No Page Component with "Catch-Me" Button Logic
 
 function NoPage() {
-  const [buttonPosition, setButtonPosition] = useState({ top: "75%", left: "10%" });
+  const [buttonPosition, setButtonPosition] = useState({
+    top: "75%",
+    left: "10%",
+  });
 
   const moveButton = () => {
     const randomTop = Math.random() * 80 + 10 + "%";
@@ -82,11 +80,19 @@ function NoPage() {
         <button
           className="no-button catch-me"
           onClick={moveButton}
-          style={{ position: "absolute", top: buttonPosition.top, left: buttonPosition.left }}
+          style={{
+            position: "absolute",
+            top: buttonPosition.top,
+            left: buttonPosition.left,
+          }}
         >
           Так
         </button>
-        <button className="yes-button" style={{position: "absolute", left: "35%", top: "75%",}} onClick={() => (window.location.href = "/")}>
+        <button
+          className="yes-button"
+          style={{ position: "absolute", left: "35%", top: "75%" }}
+          onClick={() => (window.location.href = "/")}
+        >
           Ні, я передумала
         </button>
       </div>
